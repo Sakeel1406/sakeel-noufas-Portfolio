@@ -1,0 +1,49 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #000000; 
+
+  /* Update this with your actual image from the assets folder */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('./assets/p1_img1.png'); /* Using p1_img1.png as an example */
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff; 
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+  text-align: left; /* Changes text from center-aligned to normal left-aligned */
+}
+
+/* Keeps your logo styling if you use it later */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.card {
+  padding: 2em;
+}
