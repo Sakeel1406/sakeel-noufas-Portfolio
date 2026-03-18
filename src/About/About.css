@@ -1,94 +1,139 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ... Keep your existing Reset and Container styles ... */
 
 .about-container {
-    padding: 20px;
+    padding: 40px 20px; /* Added more vertical breathing room */
     text-align: center;
 }
-
 .my-photo {
+
     display: block;
-    width: 550px;
-    height: 600px;
+
+    width: 500px;
+
+    height: 550px;
+
     border-radius: 20%;
+
     margin: 20px auto;
+
     transition: all 0.3s ease;
+
 }
 
-
+/* Updated h2 to remove the forced left padding for better centering */
 .about-container h1 {
+
     font-size: 2.5rem;
+
     margin-bottom: 20px;
+
     color: brown;
+
     font-weight: bold;
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .about-container p {
+
     font-size: 18px;
+
     font-family: Arial, Helvetica, sans-serif;
+
     line-height: 1.6;
+
     color: #a90707;
+
     width: 70%;
+
     margin: 20px auto;
+
     text-align: center;
+
     transition: all 0.3s ease;
+
 }
 
 .about-container p:hover {
+
     color: #ff0000;
+
     font-size: 20px;
+
+}
+
+
+/* --- Resume Section Styles --- */
+.resume-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: transparent; /* Subtle background to separate the section */
+    border-radius: 15px;
+}
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap; /* Wraps on small screens */
+    margin-top: 20px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #a90707; /* Matches your theme color */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid #a90707;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #a90707;
+    transform: translateY(-3px); /* Small lift effect */
+    box-shadow: 0 5px 15px rgba(169, 7, 7, 0.3);
+}
+
+/* Specific styling for the final Thank You note */
+.thank-you {
+    margin-top: 50px !important;
+    font-style: italic;
 }
 
 .about-container h2 {
+
     font-size: 28px;
+
     margin-top: 30px;
+
     color: #a90707;
+
     padding-left: 70px;
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
-
+/* --- Media Queries --- */
 @media (max-width: 768px) {
-    
-    .my-photo {
-        /* Scales the image to fit the screen width */
-        width: 90%; 
-        height: auto; /* Maintains aspect ratio so your face doesn't stretch */
-        border-radius: 15%; /* Slightly less rounding looks better on small screens */
-    }
-
-    .about-container p {
-        width: 95%; /* Uses more screen space for text on mobile */
-        font-size: 16px; /* Slightly smaller base font for readability */
-        margin: 15px auto;
-    }
-
-    .about-container p:hover {
-        /* Prevents text from jumping/growing too much on touch screens */
-        font-size: 17px; 
-    }
-
-    .about-container h1 {
-        font-size: 1.8rem; /* Prevents the title from wrapping awkwardly */
-    }
+    /* ... your existing photo and p styles ... */
 
     .about-container h2 {
+        padding-left: 0; /* Fixes the indent you had earlier */
         font-size: 22px;
-        padding-left: 0; /* Centers the heading instead of forcing a 70px indent */
-        text-align: center;
     }
-}
 
-/* --- Extra Small Screens (Phones) --- */
-@media (max-width: 480px) {
-    .about-container {
-        padding: 10px;
+    .resume-buttons {
+        flex-direction: column; /* Stack buttons on mobile */
+        align-items: center;
     }
-    
-    .my-photo {
-        margin-top: 10px;
+
+    .btn {
+        width: 80%; /* Wider buttons on mobile for easier tapping */
     }
 }
