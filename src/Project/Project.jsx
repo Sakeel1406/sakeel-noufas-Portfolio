@@ -3,6 +3,7 @@ import "./Project.css";
 
 const Project = () => {
   const [showVideo, setShowVideo] = useState(false);
+  const [activeCert, setActiveCert] = useState(null);
 
   return (
     <div className="project-container">
@@ -13,16 +14,9 @@ const Project = () => {
         <h3 className="project-title">Food Ordering Web App</h3>
 
         <p className="project-description">
-          A full-stack food ordering application with user authentication,
-          shopping cart, order tracking, and Stripe payment integration.
+          A full-stack food ordering application with authentication,
+          cart, and Stripe integration.
         </p>
-
-        <div className="tech-stack">
-          <span className="tech-tag">React</span>
-          <span className="tech-tag">Node.js</span>
-          <span className="tech-tag">MongoDB</span>
-          <span className="tech-tag">Stripe</span>
-        </div>
 
         <button
           className="project-btn"
@@ -34,13 +28,9 @@ const Project = () => {
         {showVideo && (
           <iframe
             className="project-video"
-            width="560"
-            height="315"
             src="https://drive.google.com/file/d/1OtzhzxtugDtF8zQK_lwDnOtEuiaFlN8p/preview"
-            title="Project Demo"
-            allow="autoplay"
-            allowFullScreen
-          ></iframe>
+            title="Demo"
+          />
         )}
       </div>
 
@@ -48,19 +38,13 @@ const Project = () => {
       <h1 className="section-title">Certifications</h1>
 
       <div className="cert-card">
-        <h3>MERN Stack Development Course</h3>
-        <p>
-          Completed a full MERN stack course covering MongoDB, Express.js,
-          React, and Node.js with real-world projects.
-        </p>
-        <a
-          href="https://drive.google.com/file/d/1x1ZeX1AoViTcjyCW5TkftrSA7tUx4CDp/view?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
+        <h3>MERN Stack Course</h3>
+        <button
           className="project-btn"
+          onClick={() => setActiveCert(`${import.meta.env.BASE_URL}certificates/mern-cert.pdf`)}
         >
           View Certificate
-        </a>
+        </button>
       </div>
 
       {/* INTERNSHIP */}
@@ -68,19 +52,31 @@ const Project = () => {
 
       <div className="cert-card">
         <h3>Web Development Intern</h3>
-        <p>
-          Worked as a MERN stack intern where I built and maintained web
-          applications, improved UI/UX, and integrated REST APIs.
-        </p>
-        <a
-          href="https://drive.google.com/file/d/1FuCwbbZBEq49j1XnN2n15uzT1sBzaYXE/view?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
           className="project-btn"
+          onClick={() => setActiveCert(`${import.meta.env.BASE_URL}certificates/internship-cert.pdf`)}
         >
           View Certificate
-        </a>
+        </button>
       </div>
+
+      {/* CERT VIEWER (LIKE DEMO VIDEO) */}
+      {activeCert && (
+        <div className="cert-viewer">
+          <button
+            className="close-btn"
+            onClick={() => setActiveCert(null)}
+          >
+            ✖ Close
+          </button>
+
+          <iframe
+            src={activeCert}
+            className="project-video"
+            title="Certificate"
+          />
+        </div>
+      )}
     </div>
   );
 };
