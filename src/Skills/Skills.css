@@ -56,3 +56,43 @@
   font-size:2rem;
   color:#f12a02;
 }
+
+/* --- Skills Section Media Queries --- */
+@media (max-width: 768px) {
+    .skill-container {
+        padding: 60px 5%; /* Reduces top/bottom space on mobile */
+    }
+
+    .skill-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .skill-grid {
+        /* On very small phones, we ensure at least 2 columns if possible, 
+           or let it drop to 1 if the screen is tiny */
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+        gap: 15px; /* Tighter gap for smaller screens */
+    }
+
+    .skill-card {
+        padding: 15px; /* Saves space inside the card */
+    }
+
+    .skill-icon {
+        font-size: 1.5rem; /* Shrinks the icon slightly */
+    }
+
+    .skill-name {
+        font-size: 1rem;
+    }
+}
+
+/* --- For tiny phones (Portrait) --- */
+@media (max-width: 480px) {
+    .skill-grid {
+        /* Forces 2 cards per row on even the smallest phones 
+           to avoid one long vertical list */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}

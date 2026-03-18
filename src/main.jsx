@@ -1,14 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
-import './App.css'
-import { BrowserRouter} from 'react-router-dom'
+import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter >
+    <BrowserRouter basename="/sakeel-noufas-Portfolio">
       <App />
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )

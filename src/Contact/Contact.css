@@ -55,3 +55,37 @@
 .contact-link:hover{
   background:#661201;
 }
+
+/* --- Contact Section Media Queries --- */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 60px 5%; /* Reduces top space */
+    }
+
+    .contact-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-card {
+        padding: 25px 15px; /* Narrower padding for small screens */
+    }
+
+    .contact-text {
+        font-size: 1rem;
+    }
+
+    .contact-link {
+        display: block; /* Stacks links vertically on mobile */
+        margin: 10px 0;
+        width: 100%;    /* Full-width buttons are easier to tap */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info p {
+        font-size: 0.9rem; /* Prevents long email addresses from breaking the layout */
+        word-wrap: break-word; /* Forces long text to wrap if needed */
+    }
+}

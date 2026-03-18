@@ -13,10 +13,9 @@ body {
   overflow-x: hidden;
   background-color: #000000; 
 
-  /* Update this with your actual image from the assets folder */
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-    url('./assets/p1_img1.png'); /* Using p1_img1.png as an example */
+  /* FIXED: Use standard CSS url() syntax. 
+     Update 'assets/background.jpg' to your actual file path. */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/background.jpg');
   
   background-size: cover;
   background-position: center;
@@ -28,11 +27,10 @@ body {
 #root {
   width: 100%;
   margin: 0;
-  padding: 0px;
-  text-align: left; /* Changes text from center-aligned to normal left-aligned */
+  padding: 0; /* Removed 'px' from 0, it's cleaner */
+  text-align: left; 
 }
 
-/* Keeps your logo styling if you use it later */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -46,4 +44,15 @@ body {
 
 .card {
   padding: 2em;
+}
+
+/* --- 7. MOBILE RESPONSIVENESS (The "Media Queries") --- */
+@media (max-width: 768px) {
+  .nav { flex-direction: column; gap: 10px; }
+  .nav-links { gap: 1rem; }
+  .about-container p { width: 95%; }
+  .my-photo { width: 80%; }
+  .project-title { font-size: 1.5rem; }
+  .skill-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-link { display: block; width: 100%; }
 }

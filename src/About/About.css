@@ -50,3 +50,45 @@
     padding-left: 70px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+@media (max-width: 768px) {
+    
+    .my-photo {
+        /* Scales the image to fit the screen width */
+        width: 90%; 
+        height: auto; /* Maintains aspect ratio so your face doesn't stretch */
+        border-radius: 15%; /* Slightly less rounding looks better on small screens */
+    }
+
+    .about-container p {
+        width: 95%; /* Uses more screen space for text on mobile */
+        font-size: 16px; /* Slightly smaller base font for readability */
+        margin: 15px auto;
+    }
+
+    .about-container p:hover {
+        /* Prevents text from jumping/growing too much on touch screens */
+        font-size: 17px; 
+    }
+
+    .about-container h1 {
+        font-size: 1.8rem; /* Prevents the title from wrapping awkwardly */
+    }
+
+    .about-container h2 {
+        font-size: 22px;
+        padding-left: 0; /* Centers the heading instead of forcing a 70px indent */
+        text-align: center;
+    }
+}
+
+/* --- Extra Small Screens (Phones) --- */
+@media (max-width: 480px) {
+    .about-container {
+        padding: 10px;
+    }
+    
+    .my-photo {
+        margin-top: 10px;
+    }
+}
