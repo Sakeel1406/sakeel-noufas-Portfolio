@@ -121,14 +121,14 @@
 }
 /* --- Media Queries --- */
 @media (max-width: 768px) {
-    /* ... your existing photo and p styles ... */
+    
 
     .about-container h2 {
         padding-left: 0; /* Fixes the indent you had earlier */
         font-size: 22px;
     }
 
-        .my-photo {
+    .my-photo {
 
         margin-top: 10px;
         width: 100%;
@@ -143,5 +143,16 @@
 
     .btn {
         width: 80%; /* Wider buttons on mobile for easier tapping */
+    }
+
+    .resume-section {
+        padding: 15px; 
+    }       
+
+    .btn:hover {
+        background-color: transparent;
+        transform: translateY(0);
+        color: #a90707;
+        box-shadow: 0 5px 15px rgba(169, 7, 7, 0.3); 
     }
 }

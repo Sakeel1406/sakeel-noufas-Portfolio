@@ -125,6 +125,13 @@
   line-height: 1.5;
 }
 
+.cert-description {
+  color: #f27878;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+
 /* Certificate Viewer */
 .cert-viewer {
   margin-top: 30px;
@@ -174,6 +181,55 @@
   .project-description {
     font-size: 0.95rem;
   }
+
+  .project-video {
+    height: 250px;
+  }
+
+  .tech-tag {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+
+  .project-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .project-btn:hover {
+    background: #ff4d2e;
+  }
+
+  .cert-viewer {
+    padding: 15px;
+  }
+
+  .close-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .close-btn:hover {
+    background: #ff4d2e;
+  }
+
+  .cert-card h3 {
+    font-size: 1.2rem;
+  }
+  .cert-card p {
+    font-size: 0.9rem;
+  }
+
+  .cert-description {
+    font-size: 0.9rem;
+  }
+
+  .project-card:hover {
+    transform: none; /* Disable hover effect on mobile */
+    border-color: rgba(255,255,255,0.08); /* Keep original border color */
+    box-shadow: none; /* Remove shadow on mobile */
+  }
+
+
 }
 
 /* Extra Small Screens */

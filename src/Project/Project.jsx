@@ -39,6 +39,8 @@ const Project = () => {
 
       <div className="cert-card">
         <h3>MERN Stack Course</h3>
+        <p className="cert-description">Completed MERN Stack training at Qtree Technologies, gaining hands-on experience in MongoDB, Express.js, React, and Node.js.
+Built full-stack web applications with frontend, backend, and database integration using JavaScript.</p>
         <button
           className="project-btn"
           onClick={() => setActiveCert(`${import.meta.env.BASE_URL}certificates/mern-cert.pdf`)}
@@ -52,6 +54,8 @@ const Project = () => {
 
       <div className="cert-card">
         <h3>Web Development Intern</h3>
+        <p className="cert-description">Completed internship at Cubiksoft Technologies Pvt. Ltd., working on a MERN stack-based food ordering web application.
+Demonstrated strong problem-solving skills, dedication, and ability to build full-stack projects using modern web technologies.</p>
         <button
           className="project-btn"
           onClick={() => setActiveCert(`${import.meta.env.BASE_URL}certificates/internship-cert.pdf`)}
