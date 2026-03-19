@@ -221,6 +221,10 @@
 
   .cert-description {
     font-size: 0.9rem;
+
+  }
+  .cert-description .cert-card p {
+    font-size: 0.9rem;
   }
 
   .project-card:hover {
@@ -247,4 +251,22 @@
   .project-video {
     height: 250px;
   }
+
+  .cert-card h3 {
+    font-size: 1rem;
+  }
+  .cert-card p {
+    font-size: 0.85rem;
+  }
+  .cert-description {
+    font-size: 0.85rem;
+  }
+
+  .project-card:hover {
+    transform: none; /* Disable hover effect on mobile */
+    border-color: rgba(255,255,255,0.08); /* Keep original border color */
+    box-shadow: none; /* Remove shadow on mobile */
+  }
+
+  
 }
