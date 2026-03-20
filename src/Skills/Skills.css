@@ -205,10 +205,15 @@
     height: 60vh;
   }
   
-  .close-btn {
-    top: 20px;
+   
+ .close-btn {
+    top: 100px;
     left: 20px;
+     
+      font-size: 0.9rem;
+      width: auto;
   }
+  
 }
 
 @media (max-width: 480px) {
@@ -218,13 +223,15 @@
 
   .cert-viewer iframe {
     height: 55vh;
-    width: 95%;
+    width: 90%;
   }
 
-  .close-btn {
-    font-size: 0.85rem;
+  
+.close-btn {
+    top: 120px;
+    left: 30px;
     padding: 8px 14px;
-    top: 15px;
-    left: 15px;
+    font-size: 0.8rem;
+  
   }
 }
