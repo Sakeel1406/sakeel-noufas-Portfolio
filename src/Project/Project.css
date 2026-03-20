@@ -95,67 +95,6 @@
   border: none;
 }
 
-/* Certification + Internship Card */
-.cert-card {
-  background: rgba(0,0,0,0.65);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 2rem;
-  margin: 20px auto;
-  max-width: 750px;
-  transition: all 0.3s ease;
-}
-
-.cert-card:hover {
-  transform: translateY(-6px);
-  border-color: #f12a02;
-  box-shadow: 0 10px 30px rgba(241,42,2,0.2);
-}
-
-.cert-card h3 {
-  color: #f12a02;
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-}
-
-.cert-card p {
-  color: #f27878;
-  margin-bottom: 15px;
-  line-height: 1.5;
-}
-
-.cert-description {
-  color: #f27878;
-  margin-bottom: 15px;
-  line-height: 1.5;
-}
-
-
-/* Certificate Viewer */
-.cert-viewer {
-  margin-top: 30px;
-  padding: 20px;
-  background: rgba(0,0,0,0.7);
-  border-radius: 15px;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Close Button */
-.close-btn {
-  background: #f12a02;
-  color: black;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.close-btn:hover {
-  background: #ff4d2e;
-}
 
 /* Mobile Responsive */
 @media (max-width: 850px) {
