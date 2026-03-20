@@ -1,18 +1,28 @@
 import React, { useState } from "react";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaBootstrap,
+} from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
 import "./Skills.css";
 
 const Skill = () => {
   const [activeCert, setActiveCert] = useState(null);
 
   const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Node.js",
-    "MongoDB",
-    "Git",
-    "Bootstrap",
+    { name: "HTML",       icon: <FaHtml5 />,     color: "#e34f26" },
+    { name: "CSS",        icon: <FaCss3Alt />,    color: "#1572b6" },
+    { name: "JavaScript", icon: <FaJs />,         color: "#f7df1e" },
+    { name: "React",      icon: <FaReact />,      color: "#61dafb" },
+    { name: "Node.js",    icon: <FaNodeJs />,     color: "#3c873a" },
+    { name: "MongoDB",    icon: <SiMongodb />,    color: "#47a248" },
+    { name: "Git",        icon: <FaGitAlt />,     color: "#f05032" },
+    { name: "Bootstrap",  icon: <FaBootstrap />,  color: "#7952b3" },
   ];
 
   const certifications = [
@@ -41,14 +51,17 @@ const Skill = () => {
       <div className="skill-grid">
         {skills.map((skill, index) => (
           <div className="skill-card" key={index}>
-            <p className="skill-name">{skill}</p>
+            <span className="skill-icon" style={{ color: skill.color }}>
+              {skill.icon}
+            </span>
+            <p className="skill-name">{skill.name}</p>
           </div>
         ))}
       </div>
-      <br />
-      <br/> 
-      <br/> 
-      <br/> 
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <br/>
 
 
