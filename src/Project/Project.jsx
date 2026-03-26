@@ -26,7 +26,7 @@ const Project = () => {
         </button>
 
         {showVideo && (
-          {showVideo && (
+          
   <iframe
     className="project-video"
     src="https://drive.google.com/file/d/1pWOyPaLdM5hjyRbyTw7RApd1Fj-EPaVu/preview"
