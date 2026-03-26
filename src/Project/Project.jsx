@@ -28,7 +28,7 @@ const Project = () => {
         {showVideo && (
           <iframe
             className="project-video"
-            src="https://drive.google.com/file/d/1OtzhzxtugDtF8zQK_lwDnOtEuiaFlN8p/preview"
+            src="https://drive.google.com/file/d/1pWOyPaLdM5hjyRbyTw7RApd1Fj-EPaVu/view?usp=drive_link"
             title="Demo"
           />
         )}
