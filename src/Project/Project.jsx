@@ -26,11 +26,16 @@ const Project = () => {
         </button>
 
         {showVideo && (
-          <iframe
-            className="project-video"
-            src="https://drive.google.com/file/d/1pWOyPaLdM5hjyRbyTw7RApd1Fj-EPaVu/view?usp=drive_link"
-            title="Demo"
-          />
+          {showVideo && (
+  <iframe
+    className="project-video"
+    src="https://drive.google.com/file/d/1pWOyPaLdM5hjyRbyTw7RApd1Fj-EPaVu/preview"
+    title="Demo"
+    width="100%"
+    height="400"
+    allow="autoplay"
+  />
+
         )}
       </div>
 
