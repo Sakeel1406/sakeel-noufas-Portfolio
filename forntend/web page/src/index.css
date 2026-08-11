@@ -1,0 +1,366 @@
+/* --- Global Resets & Base Styles --- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- About Component Styles --- */
+.about-container {
+  padding: 90px 4% 60px 4%;
+  max-width: 1100px;
+  margin: auto;
+  color: #ffffff;
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.about-main-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f12a02 0%, #ff7b54 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  text-shadow: 0 10px 30px rgba(241, 42, 2, 0.25);
+}
+
+.about-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 45px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-content-wrapper:hover {
+  transform: translateY(-5px);
+  border-color: rgba(241, 42, 2, 0.5);
+  box-shadow: 0 25px 50px rgba(241, 42, 2, 0.2);
+}
+
+.about-img-box {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.my-photo {
+  display: block;
+  width: 310px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(241, 42, 2, 0.5);
+  box-shadow: 0 12px 35px rgba(241, 42, 2, 0.25);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.my-photo:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(241, 42, 2, 0.4);
+  border-color: #f12a02;
+}
+
+.img-glow {
+  position: absolute;
+  inset: -10px;
+  background: linear-gradient(135deg, #f12a02, transparent, #ff7b54);
+  border-radius: 20px;
+  filter: blur(20px);
+  opacity: 0.3;
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+.about-img-box:hover .img-glow {
+  opacity: 0.6;
+}
+
+.bio-section {
+  flex: 1;
+  text-align: left;
+}
+
+.bio-section h2 {
+  font-size: 1.9rem;
+  background: linear-gradient(135deg, #f12a02 0%, #ff7b54 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(241, 42, 2, 0.1);
+  border: 1.5px solid rgba(241, 42, 2, 0.4);
+  border-radius: 12px;
+  color: #f12a02;
+  font-size: 1.2rem;
+  box-shadow: 0 6px 15px rgba(241, 42, 2, 0.15);
+  transition: all 0.3s ease;
+}
+
+.bio-section h2:hover .title-icon-badge {
+  background: #f12a02;
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(241, 42, 2, 0.35);
+}
+
+.bio-section p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
+
+.bio-section p strong {
+  color: #f12a02;
+  font-weight: 600;
+}
+
+.bio-highlight {
+  font-size: 1.12rem !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.resume-section {
+  margin-top: 30px;
+}
+
+.resume-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  background-color: #f12a02;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1.5px solid #f12a02;
+  box-shadow: 0 6px 20px rgba(241, 42, 2, 0.3);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #f12a02;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(241, 42, 2, 0.5);
+}
+
+.btn-outline {
+  background-color: rgba(241, 42, 2, 0.08);
+  border: 1.5px solid rgba(241, 42, 2, 0.6);
+}
+
+.btn-outline:hover {
+  background-color: #f12a02;
+  color: #ffffff;
+  border-color: #f12a02;
+}
+
+.thank-you {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ff9d9d;
+  font-weight: normal;
+  letter-spacing: 0.4px;
+  padding: 0 15px;
+  line-height: 1.6;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 1024px) {
+  .app {
+    width: 90%;
+  }
+  .my-photo {
+    width: 280px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 25px;
+  }
+
+  .bio-section {
+    text-align: center;
+  }
+
+  .bio-section h2 {
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+
+  .resume-buttons {
+    justify-content: center;
+  }
+
+  .my-photo {
+    width: 260px;
+    height: 310px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .about-container {
+    padding: 70px 12px 40px 12px;
+  }
+
+  .about-main-title {
+    font-size: 2.1rem;
+    margin-bottom: 25px;
+  }
+
+  .about-content-wrapper {
+    padding: 20px 15px;
+    border-radius: 18px;
+    gap: 20px;
+  }
+
+  .bio-section h2 {
+    font-size: 1.25rem;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .title-icon-badge {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  .bio-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .bio-highlight {
+    font-size: 1rem !important;
+  }
+
+  /* Optimized large mobile portrait photo size */
+  .my-photo {
+    width: 240px;
+    height: 290px;
+    border-radius: 14px;
+    margin: 0 auto;
+  }
+
+  .resume-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .thank-you {
+    font-size: 0.95rem;
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+}

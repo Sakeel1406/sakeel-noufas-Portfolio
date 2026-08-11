@@ -1,0 +1,424 @@
+/* ─── Variables & Global Container ─── */
+:root {
+  --primary-color: #f12a02;
+  --primary-hover: #d12402;
+  --accent-pink: #ff9d9d;
+  --bg-dark: rgba(15, 15, 15, 0.75);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.75);
+}
+
+.skill-container {
+  padding: 120px 5%;
+  max-width: 1000px;
+  margin: auto;
+  color: var(--text-main);
+  animation: fadeInPage 0.8s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Spacing */
+.section-spacing {
+  margin-top: 80px;
+}
+
+/* Titles with Badge Icon Styling */
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f12a02 0%, #ff7b54 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.title-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(241, 42, 2, 0.1);
+  border: 1.5px solid rgba(241, 42, 2, 0.4);
+  border-radius: 14px;
+  color: #f12a02;
+  font-size: 1.3rem;
+  box-shadow: 0 8px 20px rgba(241, 42, 2, 0.15);
+  transition: all 0.3s ease;
+}
+
+.section-title:hover .title-icon-badge {
+  background: #f12a02;
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(241, 42, 2, 0.35);
+}
+
+/* Skill Grid */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+/* Skill Card */
+.skill-card {
+  background: var(--bg-dark);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(241, 42, 2, 0.6);
+  box-shadow: 0 15px 35px rgba(241, 42, 2, 0.25);
+}
+
+/* Styled Icon Badge Wrapper */
+.skill-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.skill-card:hover .skill-icon-wrapper {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--hover-color);
+  box-shadow: 0 0 20px var(--hover-color);
+  transform: scale(1.1);
+}
+
+/* Skill Icon */
+.skill-icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.05);
+}
+
+/* Skill Name */
+.skill-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 5px;
+  color: var(--text-main);
+}
+
+/* ─── Certifications & Internship ─── */
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cert-card {
+  background: var(--bg-dark);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(241, 42, 2, 0.6);
+  box-shadow: 0 20px 40px rgba(241, 42, 2, 0.2);
+}
+
+.cert-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+  background: linear-gradient(90deg, #ffffff, var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.cert-description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Project Button */
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: rgba(241, 42, 2, 0.05);
+  border: 1.5px solid rgba(241, 42, 2, 0.6);
+  color: var(--text-main);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-btn:hover {
+  background: var(--primary-color);
+  color: var(--text-main);
+  border-color: var(--primary-color);
+  box-shadow: 0 6px 20px rgba(241, 42, 2, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ─── Certificate Viewer Modal ─── */
+
+.cert-viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeInModal 0.3s ease-out forwards;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cert-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  animation: scaleUpModal 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scaleUpModal {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cert-iframe {
+  width: 100%;
+  height: 75vh;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  z-index: 1005;
+  background: var(--primary-color);
+  color: var(--text-main);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.close-btn:hover {
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+/* ─── Media Queries ─── */
+
+@media (max-width: 768px) {
+  .skill-container {
+    padding: 60px 4%;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .title-icon-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+  }
+
+  .skill-card {
+    padding: 20px 10px;
+  }
+
+  .skill-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-icon {
+    font-size: 1.6rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .cert-card {
+    padding: 20px;
+  }
+
+  .cert-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .cert-description {
+    font-size: 0.95rem;
+  }
+
+  .cert-iframe {
+    height: 65vh;
+  }
+  
+  .close-btn {
+    top: -45px;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cert-iframe {
+    height: 60vh;
+  }
+}
+/* ─── Mobile Responsive Adjustments for Certificate Modal ─── */
+
+@media (max-width: 768px) {
+  .cert-viewer {
+    padding: 10px;
+  }
+
+  .cert-modal-content {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .cert-modal-header {
+    padding: 12px 16px;
+  }
+
+  .cert-modal-title {
+    font-size: 0.85rem;
+    max-width: 65%;
+  }
+
+  .close-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
+
+  .cert-iframe {
+    height: 65vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-modal-header {
+    padding: 10px 12px;
+  }
+
+  .cert-modal-title {
+    font-size: 0.8rem;
+  }
+
+  .close-btn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .cert-iframe {
+    height: 60vh;
+  }
+}

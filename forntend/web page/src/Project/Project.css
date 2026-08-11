@@ -1,0 +1,203 @@
+/* Container */
+.project-container {
+  padding: 120px 5%;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #ffffff;
+  animation: fadeInPage 0.8s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f12a02 0%, #ff7b54 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+/* Project Card - Styled to match Contact Card */
+.project-card {
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 35px 30px;
+  max-width: 750px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(241, 42, 2, 0.6);
+  box-shadow: 0 20px 45px rgba(241, 42, 2, 0.25);
+}
+
+/* Title */
+.project-title {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #ff9d9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.project-description {
+  color: #ff9d9d;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+}
+
+/* Button */
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border: 1.5px solid rgba(241, 42, 2, 0.6);
+  background: rgba(241, 42, 2, 0.05);
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.project-btn:hover {
+  background: #f12a02;
+  color: #ffffff;
+  border-color: #f12a02;
+  box-shadow: 0 6px 20px rgba(241, 42, 2, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Video Wrapper with Smooth Drop Animation */
+.video-wrapper {
+  overflow: hidden;
+  animation: expandVideo 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top;
+}
+
+@keyframes expandVideo {
+  from {
+    opacity: 0;
+    transform: scaleY(0.92) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+/* Video */
+.project-video {
+  width: 100%;
+  height: 380px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Project Links */
+.project-links {
+  margin-top: 22px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.project-links a {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+  color: #f12a02;
+  border: 1.5px solid rgba(241, 42, 2, 0.6);
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-links a:hover {
+  background: #f12a02;
+  color: #ffffff;
+  border-color: #f12a02;
+  box-shadow: 0 6px 20px rgba(241, 42, 2, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 850px) {
+  .project-container {
+    padding: 60px 4%;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .project-card {
+    padding: 25px 20px;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  .project-video {
+    height: 240px;
+  }
+
+  .project-btn, .project-links a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Extra Small */
+@media (max-width: 480px) {
+  .project-video {
+    height: 220px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+  }
+}
